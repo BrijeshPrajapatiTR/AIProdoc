@@ -1,0 +1,23 @@
+@model NetProcalc23Feb.Application.Calculations.Models.ChildSupportInput
+<h2>Child Support Calculator</h2>
+<form method="post" class="row g-3">
+  <div class="col-md-3"><label class="form-label">Children</label><input asp-for="ChildrenUnder18" class="form-control" type="number" min="1" max="5" /></div>
+  <div class="col-md-3"><label class="form-label">Monthly Net Resources</label><input asp-for="MonthlyNetResources" class="form-control" type="number" step="0.01" /></div>
+  <div class="col-md-3"><label class="form-label">SSN Deduction</label><input asp-for="SSN_Deduction" class="form-control" type="number" step="0.01" /></div>
+  <div class="col-md-3"><label class="form-label">Medical Insurance</label><input asp-for="MedicalInsurance" class="form-control" type="number" step="0.01" /></div>
+  <div class="col-md-12"><label class="form-label">Other Adjustments</label><input asp-for="OtherAdjustments" class="form-control" type="number" step="0.01" /></div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Calculate</button>
+  </div>
+</form>
+@if (ViewBag.Result != null)
+{
+  var r = (NetProcalc23Feb.Application.Calculations.Models.ChildSupportResult)ViewBag.Result;
+  <div class="alert alert-info mt-3">
+    <strong>Monthly:</strong> @r.Monthly<br/>
+    <strong>Semi-monthly:</strong> @r.Semimonthly<br/>
+    <strong>Biweekly:</strong> @r.Biweekly<br/>
+    <strong>Weekly:</strong> @r.Weekly<br/>
+    <div>@r.Notes</div>
+  </div>
+}

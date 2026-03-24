@@ -1,0 +1,12 @@
+@model NetProcalc23Feb.Domain.Entities.Case
+<h2>Edit Case</h2>
+<form method="post" class="row g-3">
+  <input type="hidden" asp-for="Id" />
+  <div class="col-md-4"><label class="form-label">Case #</label><input asp-for="CaseId" class="form-control" /></div>
+  <div class="col-md-4"><label class="form-label">Date</label><input asp-for="Date" class="form-control" type="date" /></div>
+  <div class="col-md-12"><label class="form-label">Description</label><input asp-for="Description" class="form-control" /></div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Save and Close</button>
+    <a class="btn btn-secondary" href="/Cases">Cancel</a>
+  </div>
+</form>

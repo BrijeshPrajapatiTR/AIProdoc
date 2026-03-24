@@ -1,0 +1,22 @@
+@model IEnumerable<NetProcalc23Feb.Domain.Entities.Party>
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>Parties</h2>
+  <a class="btn btn-primary" href="/Parties/Create">New Party</a>
+</div>
+<table class="table table-striped">
+  <thead><tr><th>Last</th><th>First</th><th>City</th><th></th></tr></thead>
+  <tbody>
+  @foreach (var p in Model)
+  {
+      <tr>
+        <td>@p.Last</td>
+        <td>@p.First</td>
+        <td>@p.City</td>
+        <td>
+          <a class="btn btn-sm btn-outline-secondary" href="/Parties/Edit/@p.Id">Edit</a>
+          <a class="btn btn-sm btn-outline-danger" href="/Parties/Delete/@p.Id" onclick="return confirm('Delete this party?')">Delete</a>
+        </td>
+      </tr>
+  }
+  </tbody>
+</table>

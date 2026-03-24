@@ -1,0 +1,48 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetProcalc23Feb</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">NetProcalc23Feb</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">File</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Parties">Parties</a></li>
+                            <li><a class="dropdown-item" href="/Cases">Cases</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">PowerPack</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Family Law</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/Calculators/ChildSupport">Child Support Calculator</a></li>
+                                    <li><a class="dropdown-item" href="/Calculators/DelinquentSupport">Delinquent Support Calculator</a></li>
+                                    <li><a class="dropdown-item" href="/Calculators/PaymentSplitter">Payment Splitter</a></li>
+                                    <li><a class="dropdown-item" href="/Calculators/Amortizer">Obligation Amortizer</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-3">
+        @RenderBody()
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

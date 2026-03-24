@@ -1,0 +1,15 @@
+@model NetProcalc23Feb.Domain.Entities.Party
+<h2>New Party</h2>
+<form method="post" class="row g-3">
+  <div class="col-md-4"><label class="form-label">Last</label><input asp-for="Last" class="form-control" /></div>
+  <div class="col-md-4"><label class="form-label">First</label><input asp-for="First" class="form-control" /></div>
+  <div class="col-md-4"><label class="form-label">Middle</label><input asp-for="Middle" class="form-control" /></div>
+  <div class="col-md-6"><label class="form-label">Address</label><input asp-for="Address" class="form-control" /></div>
+  <div class="col-md-3"><label class="form-label">City</label><input asp-for="City" class="form-control" /></div>
+  <div class="col-md-2"><label class="form-label">State</label><input asp-for="State" class="form-control" /></div>
+  <div class="col-md-3"><label class="form-label">Zip</label><input asp-for="Zip" class="form-control" /></div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Save and Close</button>
+    <a class="btn btn-secondary" href="/Parties">Cancel</a>
+  </div>
+</form>
