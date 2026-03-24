@@ -1,0 +1,23 @@
+@model NetProcalc23Feb.Web.Models.ChildSupportInput
+<h3>Child support calculator</h3>
+<form method="post" class="row g-3">
+  <div class="col-md-4">
+    <label class="form-label">Monthly amount</label>
+    <input asp-for="MonthlyAmount" class="form-control" />
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Calculate</button>
+  </div>
+</form>
+@if (ViewBag.Result != null)
+{
+  var r = ((decimal monthly, decimal biweekly, decimal weekly, decimal semimonthly))ViewBag.Result;
+  <div class="mt-3">
+    <ul>
+      <li>Monthly: @r.monthly.ToString("C")</li>
+      <li>Semi-monthly: @r.semimonthly.ToString("C")</li>
+      <li>Biweekly: @r.biweekly.ToString("C")</li>
+      <li>Weekly: @r.weekly.ToString("C")</li>
+    </ul>
+  </div>
+}

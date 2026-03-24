@@ -1,0 +1,12 @@
+@model IEnumerable<NetProcalc23Feb.Web.Models.PartyDto>
+<h3>Parties</h3>
+<a class="btn btn-primary mb-3" href="/Parties/Create">New Party</a>
+<table class="table table-striped">
+    <thead><tr><th>Name</th><th>Role</th></tr></thead>
+    <tbody>
+    @foreach (var p in Model)
+    {
+        <tr><td>@p.FirstName @p.LastName</td><td>@p.Role</td></tr>
+    }
+    </tbody>
+</table>
