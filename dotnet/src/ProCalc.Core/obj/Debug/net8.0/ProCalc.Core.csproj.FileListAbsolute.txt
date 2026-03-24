@@ -1,0 +1,6 @@
+/home/runner/work/AIProdoc/AIProdoc/dotnet/src/ProCalc.Core/obj/Debug/net8.0/ProCalc.Core.csproj.AssemblyReference.cache
+/home/runner/work/AIProdoc/AIProdoc/dotnet/src/ProCalc.Core/obj/Debug/net8.0/ProCalc.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/AIProdoc/AIProdoc/dotnet/src/ProCalc.Core/obj/Debug/net8.0/ProCalc.Core.AssemblyInfoInputs.cache
+/home/runner/work/AIProdoc/AIProdoc/dotnet/src/ProCalc.Core/obj/Debug/net8.0/ProCalc.Core.AssemblyInfo.cs
+/home/runner/work/AIProdoc/AIProdoc/dotnet/src/ProCalc.Core/obj/Debug/net8.0/ProCalc.Core.csproj.CoreCompileInputs.cache
+/home/runner/work/AIProdoc/AIProdoc/dotnet/src/ProCalc.Core/obj/Debug/net8.0/ProCalc.Core.sourcelink.json
