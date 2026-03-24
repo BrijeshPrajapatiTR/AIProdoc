@@ -1,0 +1,26 @@
+{
+  "SourceDir": "./TPS",
+  "CsvDir": "./_csv",
+  "SqlServer": "localhost,1433",
+  "Database": "ClarionAIProdoc",
+  "Schema": "clarion",
+  "DropAndRecreate": true,
+  "BatchSize": 50000,
+  "Files": [
+    { "Pattern": "*.TPS" },
+    { "Pattern": "*.tps" },
+    { "Pattern": "*.DAT" },
+    { "Pattern": "*.dat" }
+  ],
+  "Odbc": {
+    "DriverName": "TopSpeed driver (*.tps)",
+    "Directory": "./TPS",
+    "ConnectionStringExtras": "Owner=;Password=;"  
+  },
+  "TypeOverrides": {
+    "PLIST.TPS": {
+      "SomeNumericColumn": "DECIMAL(18,4)",
+      "SomeTextColumn": "NVARCHAR(4000)"
+    }
+  }
+}

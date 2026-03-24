@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <!-- Add one of the available readers for TopSpeed .TPS files, for example:
+         <PackageReference Include="Topspeed.Reader" Version="x.y.z" />
+         or another community package that can read Clarion TopSpeed files. -->
+  </ItemGroup>
+</Project>
