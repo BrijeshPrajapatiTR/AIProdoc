@@ -1,0 +1,27 @@
+@model IEnumerable<IGrouping<string?, NetProcalc23Feb.Domain.Entities.MenuItem>>
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="row">
+@foreach (var section in Model)
+{
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-header">@section.Key</div>
+            <ul class="list-group list-group-flush">
+            @foreach (var item in section.OrderBy(m => m.Order))
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>@item.Caption</span>
+                    @if (!string.IsNullOrWhiteSpace(item.ProcedureName))
+                    {
+                        <a class="btn btn-sm btn-primary" href="/procedures/@item.ProcedureName">Open</a>
+                    }
+                </li>
+            }
+            </ul>
+        </div>
+    </div>
+}
+</div>
+<p class="text-muted">Use POST /admin/import-txa to import Clarion menus and procedures from procalc.txa</p>

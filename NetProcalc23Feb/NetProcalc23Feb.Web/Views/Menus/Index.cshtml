@@ -1,0 +1,21 @@
+@model IEnumerable<NetProcalc23Feb.Domain.Entities.MenuItem>
+<h2>Menus</h2>
+<table class="table table-striped">
+    <thead><tr><th>Section</th><th>Caption</th><th>Procedure</th><th>Order</th></tr></thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.ParentCaption</td>
+                <td>@m.Caption</td>
+                <td>
+                    @if (!string.IsNullOrWhiteSpace(m.ProcedureName))
+                    {
+                        <a href="/procedures/@m.ProcedureName">@m.ProcedureName</a>
+                    }
+                </td>
+                <td>@m.Order</td>
+            </tr>
+        }
+    </tbody>
+</table>
