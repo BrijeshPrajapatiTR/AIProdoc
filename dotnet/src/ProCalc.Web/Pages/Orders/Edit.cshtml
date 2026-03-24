@@ -1,0 +1,41 @@
+@page "{id:int}"
+@using ProCalc.Core.Domain
+@model ProCalc.Web.Pages.Orders.EditModel
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+<h2>Edit Order #@Model.Order.Id</h2>
+<form method="post">
+    <input type="hidden" asp-for="Order.Id" />
+    <div class="mb-3">
+        <label class="form-label">Customer</label>
+        <select class="form-select" asp-for="Order.CustomerId" asp-items="Model.CustomerList"></select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Order Date</label>
+        <input type="datetime-local" asp-for="Order.OrderDate" class="form-control" />
+    </div>
+    <h4>Lines</h4>
+    <table class="table">
+        <thead><tr><th>Product</th><th>Qty</th><th>Unit Price</th><th></th></tr></thead>
+        <tbody>
+        @for (int i = 0; i < Model.Lines.Count; i++)
+        {
+            <tr>
+                <td>
+                    <select class="form-select" name="Lines[@i].ProductId" asp-items="Model.ProductList" value="@Model.Lines[i].ProductId"></select>
+                </td>
+                <td><input class="form-control" name="Lines[@i].Qty" value="@Model.Lines[i].Qty" /></td>
+                <td><input class="form-control" name="Lines[@i].UnitPrice" value="@Model.Lines[i].UnitPrice" /></td>
+                <td>
+                    <button class="btn btn-sm btn-danger" formaction="?handler=RemoveLine&index=@i">Remove</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <button class="btn btn-sm btn-secondary" formaction="?handler=AddLine">Add Line</button>
+    <hr />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a class="btn btn-secondary" asp-page="Index">Back</a>
+</form>

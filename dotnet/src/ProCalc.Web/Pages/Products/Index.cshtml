@@ -1,0 +1,25 @@
+@page
+@using ProCalc.Core.Domain
+@model ProCalc.Web.Pages.Products.IndexModel
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+<h2>Products</h2>
+<p><a class="btn btn-primary" asp-page="Create">New Product</a></p>
+<table class="table table-striped">
+<thead><tr><th>Sku</th><th>Name</th><th>Price</th><th></th></tr></thead>
+<tbody>
+@foreach (var p in Model.Products)
+{
+    <tr>
+        <td>@p.Sku</td>
+        <td>@p.Name</td>
+        <td>@p.Price</td>
+        <td>
+            <a class="btn btn-sm btn-secondary" asp-page="Edit" asp-route-id="@p.Id">Edit</a>
+            <a class="btn btn-sm btn-danger" asp-page="Delete" asp-route-id="@p.Id">Delete</a>
+        </td>
+    </tr>
+}
+</tbody>
+</table>

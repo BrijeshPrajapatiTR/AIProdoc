@@ -1,0 +1,26 @@
+@page
+@using ProCalc.Core.Domain
+@model ProCalc.Web.Pages.Orders.IndexModel
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+<h2>Orders</h2>
+<p><a class="btn btn-primary" asp-page="Create">New Order</a></p>
+<table class="table table-striped">
+<thead><tr><th>Id</th><th>Date</th><th>Customer</th><th>Lines</th><th></th></tr></thead>
+<tbody>
+@foreach (var o in Model.Orders)
+{
+    <tr>
+        <td>@o.Id</td>
+        <td>@o.OrderDate.ToLocalTime()</td>
+        <td>@o.Customer?.Name</td>
+        <td>@o.Lines.Count</td>
+        <td>
+            <a class="btn btn-sm btn-secondary" asp-page="Edit" asp-route-id="@o.Id">Edit</a>
+            <a class="btn btn-sm btn-danger" asp-page="Delete" asp-route-id="@o.Id">Delete</a>
+        </td>
+    </tr>
+}
+</tbody>
+</table>

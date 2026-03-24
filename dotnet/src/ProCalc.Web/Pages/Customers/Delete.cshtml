@@ -1,0 +1,12 @@
+@page "{id:int}"
+@model ProCalc.Web.Pages.Customers.DeleteModel
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+<h2>Delete Customer</h2>
+<div class="alert alert-warning">Are you sure you want to delete @Model.Customer?.Name?</div>
+<form method="post">
+    <input type="hidden" asp-for="Customer!.Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a class="btn btn-secondary" asp-page="Index">Cancel</a>
+</form>
