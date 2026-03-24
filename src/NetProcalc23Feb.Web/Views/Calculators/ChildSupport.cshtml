@@ -1,0 +1,12 @@
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>Child Support — General / Adjustment</h4>
+<form method="post">
+  <div class="row g-2">
+    <div class="col-md-3"><label>P1 Gross Monthly</label><input name="p1" class="form-control" type="number" step="0.01"></div>
+    <div class="col-md-3"><label>P2 Gross Monthly</label><input name="p2" class="form-control" type="number" step="0.01"></div>
+    <div class="col-md-2"><label>Children</label><input name="children" class="form-control" type="number"></div>
+    <div class="col-md-2"><label>P1 Adjustments</label><input name="adj1" class="form-control" type="number" step="0.01"></div>
+    <div class="col-md-2"><label>P2 Adjustments</label><input name="adj2" class="form-control" type="number" step="0.01"></div>
+  </div>
+  <button class="btn btn-primary mt-3">Calculate</button>
+</form>

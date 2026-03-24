@@ -1,0 +1,11 @@
+@model NetProcalc23Feb.Domain.Entities.Party
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>New Party</h4>
+<form method="post">
+  <div class="row g-2">
+    <div class="col-md-4"><label>First</label><input asp-for="FirstName" class="form-control"></div>
+    <div class="col-md-4"><label>Last</label><input asp-for="LastName" class="form-control"></div>
+    <div class="col-md-4"><label>Role</label><input asp-for="Role" class="form-control"></div>
+  </div>
+  <button class="btn btn-primary mt-3">Save</button>
+</form>

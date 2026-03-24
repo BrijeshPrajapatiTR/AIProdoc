@@ -1,0 +1,8 @@
+@model IEnumerable<NetProcalc23Feb.Domain.Entities.Party>
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>Parties</h4>
+<p><a class="btn btn-primary" href="/Parties/Create">New Party</a></p>
+<table class="table table-striped">
+  <tr><th>First</th><th>Last</th><th>Role</th></tr>
+  @foreach (var p in Model){ <tr><td>@p.FirstName</td><td>@p.LastName</td><td>@p.Role</td></tr> }
+</table>

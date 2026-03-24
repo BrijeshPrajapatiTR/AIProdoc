@@ -1,0 +1,9 @@
+@model NetProcalc23Feb.Application.Services.ChildSupportResult
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>Child Support — Result</h4>
+<table class="table table-bordered w-auto">
+  <tr><th>Guideline Amount P1</th><td>@Model.GuidelineAmountP1</td></tr>
+  <tr><th>Guideline Amount P2</th><td>@Model.GuidelineAmountP2</td></tr>
+  <tr><th>Net Obligation (Payer)</th><td>@Model.NetObligationPayer</td></tr>
+</table>
+<a class="btn btn-secondary" href="/Calculators/ChildSupport">Back</a>

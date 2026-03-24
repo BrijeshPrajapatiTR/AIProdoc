@@ -1,0 +1,8 @@
+@model NetProcalc23Feb.Domain.Entities.Case
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>Case @Model.CaseNumber</h4>
+<p>Opened: @Model.OpenedOn.ToShortDateString()</p>
+<h5>Obligations</h5>
+@if(@Model.Obligations.Count==0){<p>No obligations.</p>}
+<h5>Payments</h5>
+@if(@Model.Payments.Count==0){<p>No payments.</p>}
