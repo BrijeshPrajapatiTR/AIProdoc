@@ -1,0 +1,156 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6FAA73B6-0371-4E73-B9DF-1AA643726070}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>procalc</AssemblyName>
+    <OutputName>procalc</OutputName>
+    <DefineConstants>APP_SWITCH=&gt;8%3bFILECALLBACKOFF=&gt;1%3bAPPTYPESQL=&gt;0%3bHtmlHelpOn=&gt;0%3b_ProwinLinkMode_=&gt;1%3b_ProwinDllMode_=&gt;0%3b_TrkComLinkMode_=&gt;1%3b_TrkComDllMode_=&gt;0%3b_TrkExtComLinkMode_=&gt;1%3b_TrkExtComDllMode_=&gt;0%3b_TimeSlipLinkMode_=&gt;1%3b_TimeSlipDllMode_=&gt;0%3b_Pro16DllMode_=&gt;0%3bBTRIEVE=&gt;0%3b_XPTDllMode_=&gt;0%3b_XPTLinkMode_=&gt;1%3b_XPThemePresent_=&gt;1%3b_PDXPThemePresent_=&gt;1%3b_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1</DefineConstants>
+    <Model>Dll</Model>
+    <stack_size>16384</stack_size>
+    <CopyCore>True</CopyCore>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+    <StartAction>Project</StartAction>
+    <StartProgram>C:\ProDoc\ProDoc.exe</StartProgram>
+    <warnings>on</warnings>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>False</line_numbers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>False</line_numbers>
+  </PropertyGroup>
+  <ItemGroup>
+    <FileDriver Include="ASCII" />
+    <FileDriver Include="Btrieve" />
+    <FileDriver Include="DOS" />
+    <FileDriver Include="TOPSPEED" />
+    <Library Include="BLANK.ICO" />
+    <Library Include="c6folder8.ico" />
+    <Library Include="CHKGRN.ICO" />
+    <Library Include="connode2.ico" />
+    <Library Include="CPC60P32.LIB" />
+    <Library Include="expnode2.ico" />
+    <Library Include="FOLDER8.ICO" />
+    <Library Include="procalc.ico" />
+    <Library Include="procalc.Version" />
+    <Library Include="PROWIN.ICO" />
+    <Library Include="prtwmf.lib" />
+    <Library Include="QDDEFLD.ICO" />
+    <Compile Include="calla.a">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="functions.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc002.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc003.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc004.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc005.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc006.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc007.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc008.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc009.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc010.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc011.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc012.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc013.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc014.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc015.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc016.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc017.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc018.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc019.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc020.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc021.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc022.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc023.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc024.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc025.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc026.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc027.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="procalc028.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="proca_RD.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="proca_RU.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="proca_SF.CLW">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
