@@ -1,0 +1,11 @@
+@model Record
+@{
+    ViewData["Title"] = "Delete Record";
+}
+<h2>Delete</h2>
+<form method="post">
+  <input type="hidden" asp-for="Id" />
+  <p>Are you sure you want to delete <strong>@Model.Name</strong>?</p>
+  <button class="btn btn-danger" type="submit">Delete</button>
+  <a class="btn btn-secondary" href="/Records">Cancel</a>
+</form>

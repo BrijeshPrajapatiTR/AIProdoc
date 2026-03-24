@@ -1,0 +1,15 @@
+@model Record
+@{
+    ViewData["Title"] = "Create Record";
+}
+<h2>Create</h2>
+<form method="post">
+  <div class="mb-3"><label class="form-label">Name</label><input asp-for="Name" class="form-control" /></div>
+  <div class="mb-3"><label class="form-label">Description</label><textarea asp-for="Description" class="form-control"></textarea></div>
+  <div class="mb-3"><label class="form-label">Base Amount</label><input asp-for="Amount" class="form-control" /></div>
+  <div class="mb-3"><label class="form-label">Tax % (example business rule)</label><input name="taxRatePercent" class="form-control" value="0" /></div>
+  <div class="mb-3"><label class="form-label">Date</label><input asp-for="Date" type="date" class="form-control" /></div>
+  <div asp-validation-summary="All" class="text-danger"></div>
+  <button class="btn btn-primary" type="submit">Save</button>
+  <a class="btn btn-secondary" href="/Records">Cancel</a>
+</form>
