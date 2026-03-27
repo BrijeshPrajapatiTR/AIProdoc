@@ -1,0 +1,46 @@
+name: TPS to SQL (SQL Server)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tpsparser_path:
+        description: 'Full path to TPSparser executable (e.g., C:\\Tools\\TPSparser\\TPSparser.exe) if not on PATH'
+        required: false
+        default: ''
+
+jobs:
+  convert:
+    name: Convert .TPS to .sql with TPSparser
+    runs-on: [self-hosted, Windows]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: TPStoSQL
+
+      - name: Ensure output folder exists
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path sql_output -Force | Out-Null
+
+      - name: Convert using TPSparser (SQL Server dialect)
+        shell: pwsh
+        run: |
+          $exe = if ('${{ github.event.inputs.tpsparser_path }}' -ne '') { '${{ github.event.inputs.tpsparser_path }}' } else { 'TPSparser.exe' }
+          Write-Host "Using TPSparser at: $exe"
+          Get-ChildItem -Path .\TPS -Filter *.tps | ForEach-Object {
+            & $exe -i $_.FullName -o ("sql_output\\" + ($_.BaseName + ".sql")) --dialect mssql
+          }
+
+      - name: Commit and push converted SQL
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sql_output/*.sql
+          if (-not (git diff --cached --quiet)) {
+            git commit -m "Converted TPS files to SQL"
+            git push origin TPStoSQL
+          } else {
+            Write-Host "No changes to commit (no .sql generated or identical content)."
+          }
