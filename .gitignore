@@ -1,0 +1,23 @@
+# Build
+bin/
+obj/
+*.user
+*.suo
+*.DS_Store
+.vscode/
+.idea/
+*.db
+app.db
+
+# Publish
+publish/
+
+# Logs
+logs/
+*.log
+
+# Rider
+.gradle/
+
+# Tools
+.tools/

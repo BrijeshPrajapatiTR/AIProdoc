@@ -1,0 +1,7 @@
+@model IEnumerable<NetProcalc23Feb.Domain.Entities.Party>
+<h2>Parties</h2>
+<p><a class="btn btn-primary" href="/Parties/Create">New Party</a></p>
+<table class="table table-striped"><thead><tr><th>Id</th><th>First</th><th>Last</th><th>Role</th></tr></thead>
+<tbody>
+@foreach (var p in Model){<tr><td>@p.Id</td><td>@p.FirstName</td><td>@p.LastName</td><td>@p.Role</td></tr>}
+</tbody></table>

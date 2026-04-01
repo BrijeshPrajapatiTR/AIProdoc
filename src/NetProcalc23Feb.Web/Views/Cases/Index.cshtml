@@ -1,0 +1,7 @@
+@model IEnumerable<NetProcalc23Feb.Domain.Entities.Case>
+<h2>Cases</h2>
+<p><a class="btn btn-primary" href="/Cases/Create">New Case</a></p>
+<table class="table table-striped"><thead><tr><th>Id</th><th>Case #</th><th>Opened</th></tr></thead>
+<tbody>
+@foreach (var c in Model){<tr><td>@c.Id</td><td>@c.CaseNumber</td><td>@c.OpenedOn.ToShortDateString()</td></tr>}
+</tbody></table>

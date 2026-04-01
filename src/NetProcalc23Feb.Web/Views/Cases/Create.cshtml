@@ -1,0 +1,7 @@
+@model NetProcalc23Feb.Domain.Entities.Case
+<h2>New Case</h2>
+<form method="post">
+  <div class="mb-3"><label class="form-label">Case Number</label><input asp-for="CaseNumber" class="form-control" /></div>
+  <div class="mb-3"><label class="form-label">Opened On</label><input asp-for="OpenedOn" type="date" class="form-control" /></div>
+  <button class="btn btn-success" type="submit">Create</button>
+</form>

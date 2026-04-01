@@ -1,0 +1,15 @@
+@using NetProcalc23Feb.Domain.Enums
+<h2>Calculate Semi-monthly / Biweekly / Weekly Amounts</h2>
+<form method="post" class="row g-3">
+  <div class="col-md-4"><label class="form-label">Amount</label><input name="amount" type="number" step="0.01" class="form-control" value="@ViewBag.Amount" /></div>
+  <div class="col-md-4"><label class="form-label">From</label>
+    <select name="from" class="form-select">
+      <option value="1">Monthly</option>
+      <option value="2">SemiMonthly</option>
+      <option value="3">BiWeekly</option>
+      <option value="4">Weekly</option>
+    </select>
+  </div>
+  <div class="col-12"><button class="btn btn-primary">Convert</button></div>
+</form>
+@if (ViewBag.Monthly != null){<div class="alert alert-info mt-3">Monthly equivalent: <strong>@ViewBag.Monthly</strong></div>}
