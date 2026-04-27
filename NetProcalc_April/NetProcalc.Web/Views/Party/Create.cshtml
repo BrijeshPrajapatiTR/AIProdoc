@@ -1,0 +1,28 @@
+@model NetProcalc.Domain.Entities.Party
+<h2>New Party</h2>
+<form method="post">
+<div class="row g-3">
+  <div class="col-md-4">
+    <label asp-for="FirstName" class="form-label"></label>
+    <input asp-for="FirstName" class="form-control" />
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+  </div>
+  <div class="col-md-4">
+    <label asp-for="LastName" class="form-label"></label>
+    <input asp-for="LastName" class="form-control" />
+    <span asp-validation-for="LastName" class="text-danger"></span>
+  </div>
+  <div class="col-md-4">
+    <label asp-for="Role" class="form-label"></label>
+    <select asp-for="Role" class="form-select">
+        <option>Obligor</option>
+        <option>Obligee</option>
+    </select>
+  </div>
+</div>
+<button type="submit" class="btn btn-success mt-3">Save</button>
+<a class="btn btn-secondary mt-3" href="/Party">Cancel</a>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
