@@ -1,0 +1,10 @@
+@model NetProcalc23Feb.Domain.Entities.Case
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>New Case</h4>
+<form method="post">
+  <div class="row g-2">
+    <div class="col-md-4"><label>Case #</label><input asp-for="CaseNumber" class="form-control"></div>
+    <div class="col-md-4"><label>Opened On</label><input asp-for="OpenedOn" class="form-control" type="date"></div>
+  </div>
+  <button class="btn btn-primary mt-3">Save</button>
+</form>

@@ -1,0 +1,11 @@
+@model IEnumerable<NetProcalc23Feb.Domain.Entities.Case>
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+<h4>Cases</h4>
+<p><a class="btn btn-primary" href="/Cases/Create">New Case</a></p>
+<table class="table table-striped">
+  <tr><th>Case #</th><th>Opened On</th><th>Obligations</th><th></th></tr>
+  @foreach (var c in Model){ <tr>
+    <td>@c.CaseNumber</td><td>@c.OpenedOn.ToShortDateString()</td><td>@c.Obligations.Count</td>
+    <td><a class="btn btn-sm btn-outline-secondary" href="/Cases/Details/@c.Id">Open</a></td>
+  </tr> }
+</table>
